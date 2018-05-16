@@ -1,0 +1,76 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,p,n,b,c,d,f,g,h;
+    cout<<"Bienvenido"<<endl;
+    cout<<"almendras a 50bs. el kilo y 5bs los 100g."<<endl<<"nueces a 150bs. el kilo y 15bs. los 100g."<<endl<<"pistachos a 200bs. el kilo y 20bs. los 100g"<<endl<<"ingrese todos sus valores en kilogramos"<<endl;
+    cout<<"cuantos kilos de almendras quiere"<<endl;
+    cin>>a;
+    if (a<=0) 
+    {
+        cout <<"error debe comprar algo"<<endl;
+        return 0;
+    }
+    else
+    {
+        b=a*50;
+        cout<<"usted a comprado "<<a<<" kilogramos de almendras y tiene un subtotal de:"<<b<<endl;
+        cout<<"cuantos kilogramos de nueces quiere"<<endl;
+        cin>> n;
+        if (n<=0)
+        {
+            cout<<"error, debe comprar algo"<<endl;
+            return 0;
+        }
+        else
+        {
+            c=n*150;
+            cout<<"usted a comprado "<< n <<" kilogramos de nueces y tiene un subtotal de"<<c<<endl;
+            cout<<"cuantos kilos de pistachos quiere"<<endl;
+            cin>>p;
+        }
+        if (p<=0)
+        {
+            cout<<"error, debe comprar algo"<<endl;
+            return 0;
+        }
+        else
+        {
+            d=p*200;
+            cout<<"usted a comprado "<<p<<" kilogramos de pistachos y tiene un subtotal de: "<<d<<endl;
+        }
+            f=b+c+d;
+            cout<<"su compra tiene un total de: "<<f<<"bs."<<endl;
+            cout<<"indique cuanto va a pagar"<<endl;
+            cin>>g;
+            if (g<f)
+            {
+                cout<<"error"<<endl<<"su monto de dinero es menor a la compra"<<endl;
+                return 0;
+            }
+            else
+            {
+                h=g-f;
+                cout<<"su cambio es: "<<h<<endl;
+                cout<<"            FACTURA             "<<endl;
+                cout<<"--------------------------------"<<endl;
+                cout<<"          No. FACTURA:23492     "<<endl;
+                cout<<"--------------------------------"<<endl;
+                cout<<"         MERCADO DE FRUTAS      "<<endl;
+                cout<<"         TIENDA CARREFOUR       "<<endl;
+                cout<<"Fecha: 14/05/2018"<<endl<<"Hora: 11:11"<<endl;
+                cout<<"--------------------------------"<<endl;
+                cout<<"--------------------------------"<<endl;
+                cout<<"ALMENDRAS......................."<<b<<"Bs."<<endl;
+                cout<<"NUECES.........................."<<c<<"Bs."<<endl;
+                cout<<"PISTACHOS......................."<<d<<"Bs."<<endl;
+                cout<<"total a pagar:                  "<<f<<"Bs."<<endl;
+                cout<<"Efectivo:                       "<<g<<"Bs."<<endl;
+                cout<<"Cambio:                         "<<h<<"Bs."<<endl;
+            }
+        return 0;
+    }
+}
